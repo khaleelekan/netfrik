@@ -1,19 +1,18 @@
-import React from 'react'
-import {BrowserRoute, Routes, Route} from 'react-router-dom'
-import Login from './pages/Login'
-import Signup from './pages/Signup'
-import Netfrik from './pages/Netfrik'
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Netflix from "./pages/Netflix";
 
-function App() {
+
+export default function App() {
   return (
-    <BrowserRoute>
-    <Routes>
-     <Route exact path='/login' element={<Login />}/>
-     <Route exact path='/signup' element={<Signup />}/>
-     <Route exact path='/netfrik' element={<Netfrik />}/>
-    </Routes>
-    </BrowserRoute>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/login" element={<Signup />} />
+        <Route exact path="/login" element={<Netflix />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
-export default App
