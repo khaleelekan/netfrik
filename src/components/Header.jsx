@@ -6,7 +6,7 @@ import logo from '../assets/logo.png';
 export default function Header(props) {
   const navigate = useNavigate();
   return (
-    <Container>
+    <Container className='flex a-center j-between'>
       <div className='logo'>
         <img src={logo} alt='logo'/>
       </div>
