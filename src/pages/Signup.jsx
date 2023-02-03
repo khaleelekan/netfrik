@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Styled from 'styled-components'
 import BackgroundImage from '../components/BackgroundImage'
@@ -8,8 +7,7 @@ function Signup() {
   return (
     <Container>
       <BackgroundImage />
-      <div className="content">
-        <Header login />
+        <Header />
         <div className="body flex column a-center j-center">
           <div className="text flex column">
             <h1>Unlimited movies, TV shows and more.</h1>
@@ -18,12 +16,13 @@ function Signup() {
               Ready to watch? Enter your email to create or restart membership.
             </h6>
           </div>
-        </div>
-       </div> 
+
+         </div> 
     </Container>
   )
 }
 
-const Container = Styled.div;
+const Container = Styled.div`
+`
 
 export default Signup
