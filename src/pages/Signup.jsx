@@ -1,9 +1,18 @@
 import React from 'react';
 import Styled from 'styled-components'
+import { useState } from 'react';
 import BackgroundImage from '../components/BackgroundImage'
 import Header from '../components/Header'
 
 function Signup() {
+  const [showPassword, setShowPassword] = useState(false);
+  const [formValues, setFormValues] = useState({
+    email: "",
+    password: "",
+  });
+  const handleSignIn = async ()=>{
+    console.log(formValues)
+  }
   return (
     <Container>
       <BackgroundImage />
@@ -17,8 +26,39 @@ function Signup() {
               Ready to watch? Enter your email to create or restart membership.
             </h6>
           </div>
-
-         </div> 
+          <div className="form">
+            <input
+              type="email"
+              placeholder="Email address"
+              onChange={(e) =>
+                setFormValues({
+                  ...formValues,
+                  [e.target.name]: e.target.value,
+                })
+              }
+              name="email"
+              value={formValues.email}
+            />
+            {showPassword && (
+              <input
+                type="password"
+                placeholder="Password"
+                onChange={(e) =>
+                  setFormValues({
+                    ...formValues,
+                    [e.target.name]: e.target.value,
+                  })
+                }
+                name="password"
+                value={formValues.password}
+              />
+            )}
+            {!showPassword && (
+              <button onClick={() => setShowPassword(true)}>Get Started</button>
+            )}
+          </div>
+          {showPassword && <button onClick={handleSignIn}>Sign Up</button>}
+        </div>
          </div>
     </Container>
   )
