@@ -2,7 +2,9 @@ import React from 'react';
 import Styled from 'styled-components'
 import { useState } from 'react';
 import BackgroundImage from '../components/BackgroundImage'
+import {firebaseAuth} from '../utils/firebase-config'
 import Header from '../components/Header'
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 function Signup() {
   const [showPassword, setShowPassword] = useState(false);
@@ -11,8 +13,15 @@ function Signup() {
     password: "",
   });
   const handleSignIn = async ()=>{
-    console.log(formValues)
+    try{
+      const {email, password} = formValues;
+      await createUserWithEmailAndPassword (firebaseAuth, email,password)
+    }
+    catch(error){
+      console.log(error)
+    }
   }
+
   return (
     <Container>
       <BackgroundImage />
