@@ -1,7 +1,4 @@
 import React from 'react';
-import {
-  createUserWithEmailAndPassword
-} from "firebase/auth";
 import Styled from 'styled-components'
 import { useState } from 'react';
 import BackgroundImage from '../components/BackgroundImage'
