@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import logo from '../assets/logo.png'
 import signOut, { onAuthStateChanged } from 'firebase/auth'
-import {FaSearch, FaPowerOff} from 'react-icons'
+import {FaSearch, FaPowerOff} from 'react-icons/fa'
 import {Link, Navigate, useNavigate} from 'react-router-dom' 
 import firebaseAuth from '../utils/firebase-config'
 

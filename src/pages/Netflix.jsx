@@ -38,6 +38,11 @@ function Netflix() {
               <FaPlay />
               Play
             </button>
+            <button
+              onClick={() => navigate("/player")}
+              className="flex j-center a-center"
+            ><AiOutlineInfoCircle /> More Info
+            </button>
    </div>
    </div>
    </div>
