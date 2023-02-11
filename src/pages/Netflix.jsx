@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import backgroundImage from '../assets/home.jpg'
@@ -18,7 +19,7 @@ function Netflix() {
 
   const navigate = useNavigate();
   return (
-    <div>
+    <Container>
       <Navbar isScrolled={isScrolled}/>
       <div className="hero">
         <img
@@ -46,9 +47,10 @@ function Netflix() {
    </div>
    </div>
    </div>
-   </div>
+   </Container>
    
   )
 }
-
+const Container = styled.div`
+`
 export default Netflix
