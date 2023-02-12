@@ -52,95 +52,52 @@ function Netflix() {
   )
 }
 const Container = styled.div`
-.scrolled {
   background-color: black;
-}
-nav {
-  position: sticky;
-  top: 0;
-  height: 6.5rem;
-  width: 100%;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  padding: 0 4rem;
-  align-items: center;
-  transition: 0.3s ease-in-out;
-  .left {
-    gap: 2rem;
-    .brand {
-      img {
-        height: 4rem;
-      }
+  .hero {
+    position: relative;
+    .background-image {
+      filter: brightness(60%);
     }
-    .links {
-      list-style-type: none;
-      gap: 2rem;
-      li {
-        a {
-          color: white;
-          text-decoration: none;
+    img {
+      height: 100vh;
+      width: 100vw;
+    }
+    .container {
+      position: absolute;
+      bottom: 5rem;
+      .logo {
+        img {
+          width: 100%;
+          height: 100%;
+          margin-left: 5rem;
+        }
+      }
+      .buttons {
+        margin: 5rem;
+        gap: 2rem;
+        button {
+          font-size: 1.4rem;
+          gap: 1rem;
+          border-radius: 0.2rem;
+          padding: 0.5rem;
+          padding-left: 2rem;
+          padding-right: 2.4rem;
+          border: none;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          &:hover {
+            opacity: 0.8;
+          }
+          &:nth-of-type(2) {
+            background-color: rgba(109, 109, 110, 0.7);
+            color: white;
+            svg {
+              font-size: 1.8rem;
+            }
+          }
         }
       }
     }
   }
-  .right {
-    gap: 1rem;
-    button {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      &:focus {
-        outline: none;
-      }
-      svg {
-        color: #f34242;
-        font-size: 1.2rem;
-      }
-    }
-    .search {
-      display: flex;
-      gap: 0.4rem;
-      align-items: center;
-      justify-content: center;
-      padding: 0.2rem;
-      padding-left: 0.5rem;
-      button {
-        background-color: transparent;
-        border: none;
-        &:focus {
-          outline: none;
-        }
-        svg {
-          color: white;
-          font-size: 1.2rem;
-        }
-      }
-      input {
-        width: 0;
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.3s ease-in-out;
-        background-color: transparent;
-        border: none;
-        color: white;
-        &:focus {
-          outline: none;
-        }
-      }
-    }
-    .show-search {
-      border: 1px solid white;
-      background-color: rgba(0, 0, 0, 0.6);
-      input {
-        width: 100%;
-        opacity: 1;
-        visibility: visible;
-        padding: 0.3rem;
-      }
-    }
-  }
-}
 `
 export default Netflix
