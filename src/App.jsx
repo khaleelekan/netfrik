@@ -13,7 +13,7 @@ export default function App() {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/signup" element={<Signup />} />
         <Route exact path="/" element={<Netflix />} />
-        <Route exact path="/player" element={<Player />} />
+        <Route exact path="/ player" element={<Player />} />
       </Routes>
     </BrowserRouter>
   );
